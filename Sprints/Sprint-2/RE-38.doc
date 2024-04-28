@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#RE-38] Implementation of Classes and API</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://uwaterloo-g3sankar.atlassian.net/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <b><a id="parent_issue_summary" href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-1">Backend and Frontend engineering - RAPIDEYE360</a></b>
+                <span style="font-size: 9px">(<a id="parent_issue_key" href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-1">RE-1</a>)</span>
+                <h3 class="formtitle"><img src="https://uwaterloo-g3sankar.atlassian.net/images/icons/link_out_bot.gif" width="16" height="16" />
+                        [RE-38]&nbsp;<a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-38">Implementation of Classes and API</a>
+            <span class="subText">
+               Created: 22/Jan/24                   &nbsp;Updated: 27/Feb/24
+
+                                                    &nbsp;Resolved: 20/Feb/24
+                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">Done</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://uwaterloo-g3sankar.atlassian.net/secure/BrowseProject.jspa?id=10004">RAPID_EYE360</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Components:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    
+            <td width="20%"><b>Parent:</b></td>
+        <td width="80%"><a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-1">Backend and Frontend engineering - RAPIDEYE360</a></td>
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Story
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                High
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:c356abf3-1a77-4e56-932c-b0ef6afc17bb"
+                id="word_reporter_712020:c356abf3-1a77-4e56-932c-b0ef6afc17bb"
+                href="https://uwaterloo-g3sankar.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ac356abf3-1a77-4e56-932c-b0ef6afc17bb">
+                    Giridharan Sankaran
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:d2dc2c1d-2dea-4f7b-aea7-82f76b0cb8ed"
+                id="word_assignee_712020:d2dc2c1d-2dea-4f7b-aea7-82f76b0cb8ed"
+                href="https://uwaterloo-g3sankar.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ad2dc2c1d-2dea-4f7b-aea7-82f76b0cb8ed">
+                    Ashwin Mani
+                </a>
+
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                            Done
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-10068-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            None
+                    </td>
+    </tr>
+    
+    	<tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            2 weeks, 2 hours
+                    </td>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            2 weeks
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Time Spent:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            1 week, 3 days, 2 hours
+                    </td>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap>
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Original Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            3 weeks, 3 days, 4 hours
+                    </td>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap>
+                            2 weeks
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+        
+            <tr>
+            <td bgcolor="#f0f0f0" width="20%" valign="top">
+                <b>Issue links:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" class="noPadding">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Blocks</b><br/>
+                            </td>
+                        </tr>
+                                                                <tr>
+            <td>
+                is blocked by
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-125">
+                     <strike>RE-125</strike>                 </a>
+            </td>
+            <td>
+                API failed in Supplier class while tr...
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                is blocked by
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-137">
+                     <strike>RE-137</strike>                 </a>
+            </td>
+            <td>
+                Registering a clerk with appropriate ...
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                is blocked by
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-138">
+                     <strike>RE-138</strike>                 </a>
+            </td>
+            <td>
+                Clerk login api not working as intended
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                is blocked by
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-126">
+                     <strike>RE-126</strike>                 </a>
+            </td>
+            <td>
+                Unable to update expiry date for prod...
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                is blocked by
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-127">
+                     <strike>RE-127</strike>                 </a>
+            </td>
+            <td>
+                Date datatype mismatch
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                is blocked by
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-128">
+                     <strike>RE-128</strike>                 </a>
+            </td>
+            <td>
+                Datatype Mismatch for ID [Primary Key]
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+                                        </table>
+            </td>
+        </tr>
+    
+
+
+<tr><td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sub-tasks:</b></td>
+    <td bgcolor="#ffffff" valign="top">
+        <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr bgcolor="#f0f0f0">
+                <td>
+                    <b>Key</b><br/>
+                </td>
+                <td>
+                    <b>Summary</b><br/>
+                </td>
+                <td>
+                    <b>Type</b><br/>
+                </td>
+                <td>
+                    <b>Status</b><br/>
+                </td>
+                <td>
+                    <b>Assignee</b><br/>
+                </td>
+            </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-52">RE-52</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-52">Design of UI with Figma - Neno</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Nyenooke Eno  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-39">RE-39</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-39">Task for design of Product class - As...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Ashwin Mani  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-53">RE-53</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-53">Task for Javaspring learning - Reshma</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Reshma Shaji  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-54">RE-54</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-54">Task for Javaspring learning - Aiswarya</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Aiswaryalakshmi Manoj  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-93">RE-93</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-93">Task for design of Supplier class - Giri</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-94">RE-94</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-94">Task for design of Login class - Aisw...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Aiswaryalakshmi Manoj  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-95">RE-95</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-95">Task for design of Supplier class - Y...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Yogesharvind Nedumaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-99">RE-99</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-99">Task for implementation of Product cl...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Ashwin Mani  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-122">RE-122</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-122">Task for developing Discount class - ...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-96">RE-96</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-96">Task for design of Login class - Reshma</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Reshma Shaji  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-97">RE-97</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-97">Task for designing Webpage-1 (Figma)-...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Nyenooke Eno  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-98">RE-98</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-98">Task for Designing Landing Page (Figm...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Nyenooke Eno  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-100">RE-100</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-100">Task for implementation of Expiry cla...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-101">RE-101</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-101">Task for implementation of Login clas...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Aiswaryalakshmi Manoj  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-102">RE-102</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-102">Task for implementation of Discount c...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Yogesharvind Nedumaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-103">RE-103</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-103">Task for implementation of Login clas...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Reshma Shaji  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-105">RE-105</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-105">Task for testing API - Giri</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-108">RE-108</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-108">Task for testing API - Yogesh</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Yogesharvind Nedumaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-111">RE-111</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-111">Task for Sprint documentation - Giri</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-112">RE-112</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-112">Task for Sprint documentation - Yogesh</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-117">RE-117</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-117">Task for technical brief - Giri</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-119">RE-119</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-119">Task for technical brief - Yogesh</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Yogesharvind Nedumaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-104">RE-104</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-104">Task for testing API - Ashwin</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Ashwin Mani  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-110">RE-110</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-110">Task for Sprint documentation - Ashwin</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Ashwin Mani  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-123">RE-123</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-123">Task for developing Discount class - ...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Yogesharvind Nedumaran  &nbsp;
+                                            </td>
+                </tr>
+                    </table>
+    </td>
+</tr>
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sprint:</b></td>
+                <td id="customfield_10020-10068-value" class="value" bgcolor="#ffffff" width="80%">RE Sprint 1, RE Sprint 2</td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <p><b><em>Task Information:</em></b></p>
+
+<p>The Product Class catalogs the product details displayed on the main page. We need to create its necessary entity class, service and controller for it to be able to export data through its APIs.</p>
+
+<p><b><em>Expected Workflow:</em></b></p>
+
+<ul>
+	<li>Hit all the APIs using Postman and attach the testing report.</li>
+	<li>Pass the Pipeline</li>
+</ul>
+
+
+
+
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<td class='confluenceTd'><b>Acceptance Criteria for the Product , Expiry , Discount and Supplier class</b></td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store clerk , I would like to log into the application through the Clerk login tile</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store clerk , I would like to fetch the details of the products in the inventory</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store clerk ,  I would like to fetch the details of the products in the inventory using UPC ID , category and brand name specifically</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store clerk ,  I would like to fetch the details of the manufacturing date of the product and expiry date of the product</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager , I would like to log into the application through the Clerk login tile</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager, I would like to fetch the details of the products in the inventory</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager ,  I would like to fetch the details of the products in the inventory using UPC ID , category and brand name specifically</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager,  I would like to fetch the details of the manufacturing date of the</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store clerk , I would like to delete products based on the product ID and aisle number</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager  , I would like to delete products based on the product ID and aisle number</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager , I would like to add/update expiry date to products</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager , I would like to find all the expired products</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager , I would like to find expiry date of product using UPCID and also the product with specific expiry date</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager , I would add discounts to products nearing expiry</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store clerk , I would like to find all the expired products</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store clerk  , I would like to find expiry date of product using UPCID and also the product with specific expiry date</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store clerk , I should be able to view discounts on products and also products with discounts using the UPCID</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager , I should be able to view discounts on products and also products with discounts using the UPCID</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager , I should be able to add new brand of products in the inventory and also update brand names</td>
+</tr>
+<tr>
+<td class='confluenceTd'>As a store manager , I should be able to view all brands in the inventory and view the supplier of these brands</td>
+</tr>
+</tbody></table>
+</div>
+
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+Generated at Sun Apr 28 22:00:29 UTC 2024 by Giridharan Sankaran using Jira 1001.0.0-SNAPSHOT#100251-rev:4690f9fa025ccb713885a7f8212eefdeb0c508be.
+
+</body>
+</html>

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#RE-140] Front end implementation</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://uwaterloo-g3sankar.atlassian.net/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <b><a id="parent_issue_summary" href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-1">Backend and Frontend engineering - RAPIDEYE360</a></b>
+                <span style="font-size: 9px">(<a id="parent_issue_key" href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-1">RE-1</a>)</span>
+                <h3 class="formtitle"><img src="https://uwaterloo-g3sankar.atlassian.net/images/icons/link_out_bot.gif" width="16" height="16" />
+                        [RE-140]&nbsp;<a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-140">Front end implementation</a>
+            <span class="subText">
+               Created: 04/Mar/24                   &nbsp;Updated: 05/Apr/24
+
+                                                    &nbsp;Resolved: 18/Mar/24
+                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">Done</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://uwaterloo-g3sankar.atlassian.net/secure/BrowseProject.jspa?id=10004">RAPID_EYE360</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Components:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    
+            <td width="20%"><b>Parent:</b></td>
+        <td width="80%"><a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-1">Backend and Frontend engineering - RAPIDEYE360</a></td>
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Story
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Medium
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:124e935c-abef-4d9a-9749-95bcb183fbe0"
+                id="word_reporter_712020:124e935c-abef-4d9a-9749-95bcb183fbe0"
+                href="https://uwaterloo-g3sankar.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3A124e935c-abef-4d9a-9749-95bcb183fbe0">
+                    Yogesharvind Nedumaran
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:b6436065-ad38-4439-9779-d838bcc2dbeb"
+                id="word_assignee_712020:b6436065-ad38-4439-9779-d838bcc2dbeb"
+                href="https://uwaterloo-g3sankar.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ab6436065-ad38-4439-9779-d838bcc2dbeb">
+                    Nyenooke Eno
+                </a>
+
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                            Done
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-10170-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            None
+                    </td>
+    </tr>
+    
+    	<tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            2 weeks
+                    </td>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            2 weeks
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Time Spent:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            3 days, 1 hour
+                    </td>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap>
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Σ Original Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap>
+                            2 weeks, 3 days, 1 hour
+                    </td>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap>
+                            2 weeks
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+        
+            <tr>
+            <td bgcolor="#f0f0f0" width="20%" valign="top">
+                <b>Issue links:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" class="noPadding">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Relates</b><br/>
+                            </td>
+                        </tr>
+                                                                <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-174">
+                     <strike>RE-174</strike>                 </a>
+            </td>
+            <td>
+                Incorrect maven command to trigger th...
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-175">
+                     <strike>RE-175</strike>                 </a>
+            </td>
+            <td>
+                Incorrect command to trigger integrat...
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-176">
+                     <strike>RE-176</strike>                 </a>
+            </td>
+            <td>
+                Deploying the JAR File to a correct l...
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-177">
+                     <strike>RE-177</strike>                 </a>
+            </td>
+            <td>
+                Incorrect UPCIDs causing a clash to a...
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-178">
+                     <strike>RE-178</strike>                 </a>
+            </td>
+            <td>
+                Date Format Mismatch Issue
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-179">
+                     <strike>RE-179</strike>                 </a>
+            </td>
+            <td>
+                Dummy emails non functional as email ...
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-180">
+                     <strike>RE-180</strike>                 </a>
+            </td>
+            <td>
+                Passing Null in BrandName - Needs Fixing
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-181">
+                     <strike>RE-181</strike>                 </a>
+            </td>
+            <td>
+                Displaying products unapproved for di...
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+            <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-182">
+                     <strike>RE-182</strike>                 </a>
+            </td>
+            <td>
+                Refresh unavailable
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
+                                        </table>
+            </td>
+        </tr>
+    
+
+
+<tr><td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sub-tasks:</b></td>
+    <td bgcolor="#ffffff" valign="top">
+        <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr bgcolor="#f0f0f0">
+                <td>
+                    <b>Key</b><br/>
+                </td>
+                <td>
+                    <b>Summary</b><br/>
+                </td>
+                <td>
+                    <b>Type</b><br/>
+                </td>
+                <td>
+                    <b>Status</b><br/>
+                </td>
+                <td>
+                    <b>Assignee</b><br/>
+                </td>
+            </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-141">RE-141</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-141">Creation of Discount Page</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Nyenooke Eno  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-142">RE-142</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-142">Creation of Expiry page</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Nyenooke Eno  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-143">RE-143</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-143">Area preparation for Cucumber executi...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-144">RE-144</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-144">Task for creation and execution of Su...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-145">RE-145</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-145">Task for creation and execution of Di...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-146">RE-146</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-146">Task for creation and execution of Ex...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-147">RE-147</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-147">Task for creation and execution of Pr...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Giridharan Sankaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-148">RE-148</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-148">Creation of jar file on Azure cloud -...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Ashwin Mani  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-149">RE-149</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-149">Modification of yaml file on Azure cl...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Ashwin Mani  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-150">RE-150</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-150">Integration of jar file on Azure clou...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Ashwin Mani  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-151">RE-151</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-151">Area preparation for Cucumber creatio...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Yogesharvind Nedumaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-152">RE-152</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-152">Task for creation and execution of Di...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Yogesharvind Nedumaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-153">RE-153</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-153">Task for creation and execution of Ex...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Yogesharvind Nedumaran  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-154">RE-154</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-154">Integration of login page - Neno</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Nyenooke Eno  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-155">RE-155</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-155">Creation of manager screens - Neno</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Nyenooke Eno  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-156">RE-156</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-156">Creation of clerk screens - Neno</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Nyenooke Eno  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-157">RE-157</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-157">Design requirements for analytics das...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Reshma Shaji  &nbsp;
+                                            </td>
+                </tr>
+                            <tr>
+                    <td>
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-158">RE-158</a>
+                    </td>
+                    <td valign="top" width="25%">
+                        <a href="https://uwaterloo-g3sankar.atlassian.net/browse/RE-158">Design requirements for analytics das...</a>
+                    </td>
+                    <td>
+                        Sub-task
+                    </td>
+                    <td>
+                        Done
+                    </td>
+                    <td>
+                                                     Aiswaryalakshmi Manoj  &nbsp;
+                                            </td>
+                </tr>
+                    </table>
+    </td>
+</tr>
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sprint:</b></td>
+                <td id="customfield_10020-10170-value" class="value" bgcolor="#ffffff" width="80%">RE Sprint 4</td>
+            </tr>
+            </table>
+
+
+Generated at Sun Apr 28 22:08:38 UTC 2024 by Giridharan Sankaran using Jira 1001.0.0-SNAPSHOT#100251-rev:4690f9fa025ccb713885a7f8212eefdeb0c508be.
+
+</body>
+</html>
