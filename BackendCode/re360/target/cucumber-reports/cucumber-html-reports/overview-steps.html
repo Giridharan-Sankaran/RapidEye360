@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>RapidEye360</td>
+        <td>1</td>
+      <td>05 Apr 2024, 01:54</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.add_the_aisleNumber_for_discount_as(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.add_the_brand_for_discount_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.add_the_category_for_discount_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.add_the_discountprice_for_discount_as(java.lang.Float)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.add_the_name_for_discount_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.add_the_originalprice_for_discount_as(java.lang.Float)</td>
+              <td>1</td>
+              <td class="duration" data-value="999700">0.000</td>
+              <td class="duration" data-value="999700">0.000</td>
+              <td class="duration" data-value="999700">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.add_the_upcid_for_discount_as(java.lang.Long)</td>
+              <td>1</td>
+              <td class="duration" data-value="980200">0.000</td>
+              <td class="duration" data-value="980200">0.000</td>
+              <td class="duration" data-value="980200">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.i_request_all_discounts_from_inventory()</td>
+              <td>1</td>
+              <td class="duration" data-value="182271300">0.182</td>
+              <td class="duration" data-value="182271300">0.182</td>
+              <td class="duration" data-value="182271300">0.182</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.i_request_discount_details_with_upcid(java.lang.Long)</td>
+              <td>1</td>
+              <td class="duration" data-value="169547300">0.169</td>
+              <td class="duration" data-value="169547300">0.169</td>
+              <td class="duration" data-value="169547300">0.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.i_request_to_delete_the_discount_with_upcid(java.lang.Long)</td>
+              <td>1</td>
+              <td class="duration" data-value="177206700">0.177</td>
+              <td class="duration" data-value="177206700">0.177</td>
+              <td class="duration" data-value="177206700">0.177</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.i_send_a_post_request_for_discount()</td>
+              <td>1</td>
+              <td class="duration" data-value="1748160500">1.748</td>
+              <td class="duration" data-value="1748160500">1.748</td>
+              <td class="duration" data-value="1748160500">1.748</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.i_send_a_put_request_for_discount()</td>
+              <td>1</td>
+              <td class="duration" data-value="245973400">0.245</td>
+              <td class="duration" data-value="245973400">0.245</td>
+              <td class="duration" data-value="245973400">0.245</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.i_set_put_discount_service_api_endpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="999000">0.000</td>
+              <td class="duration" data-value="999000">0.000</td>
+              <td class="duration" data-value="999000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.i_update_the_discount_details_for_the_upcid(java.lang.Long)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.setPostEndpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.the_brand_of_record_for_discount_GET_should_be(int,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="4986100">0.004</td>
+              <td class="duration" data-value="4986100">0.005</td>
+              <td class="duration" data-value="9972200">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.the_category_of_record_for_discount_GET_should_be(int,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6005500">0.006</td>
+              <td class="duration" data-value="6005500">0.006</td>
+              <td class="duration" data-value="12011000">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.the_discount_application_is_running()</td>
+              <td>5</td>
+              <td class="duration" data-value="26725120">0.026</td>
+              <td class="duration" data-value="26725120">0.132</td>
+              <td class="duration" data-value="133625600">0.133</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.the_discount_price_of_record_for_discount_GET_should_be(int,java.lang.Float)</td>
+              <td>2</td>
+              <td class="duration" data-value="5185000">0.005</td>
+              <td class="duration" data-value="5185000">0.007</td>
+              <td class="duration" data-value="10370000">0.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.the_name_of_record_for_discount_GET_should_be(int,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="4971850">0.004</td>
+              <td class="duration" data-value="4971850">0.005</td>
+              <td class="duration" data-value="9943700">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.the_originalprice_of_record_for_discount_GET_should_be(int,java.lang.Float)</td>
+              <td>2</td>
+              <td class="duration" data-value="4499100">0.004</td>
+              <td class="duration" data-value="4499100">0.005</td>
+              <td class="duration" data-value="8998200">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.the_response_message_for_discount_deletion_should_be(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3006500">0.003</td>
+              <td class="duration" data-value="3006500">0.003</td>
+              <td class="duration" data-value="3006500">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.the_response_status_code_for_discount_should_be(java.lang.Integer)</td>
+              <td>5</td>
+              <td class="duration" data-value="209120">0.000</td>
+              <td class="duration" data-value="209120">0.001</td>
+              <td class="duration" data-value="1045600">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DiscountDefinitions.DiscountSteps.the_upcid_of_record_for_discount_GET_should_be(int,java.lang.Long)</td>
+              <td>2</td>
+              <td class="duration" data-value="90766550">0.090</td>
+              <td class="duration" data-value="90766550">0.175</td>
+              <td class="duration" data-value="181533100">0.181</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.add_the_aisleNumber_for_expiry_as(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.add_the_brand_for_expiry_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.add_the_category_for_expiry_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.add_the_dateOfExpiry_for_expiry_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6965300">0.006</td>
+              <td class="duration" data-value="6965300">0.006</td>
+              <td class="duration" data-value="6965300">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.add_the_name_for_expiry_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.add_the_upcid_for_expiry_as(java.lang.Long)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.i_request_all_expired_list_from_inventory()</td>
+              <td>1</td>
+              <td class="duration" data-value="183987100">0.183</td>
+              <td class="duration" data-value="183987100">0.183</td>
+              <td class="duration" data-value="183987100">0.183</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.i_request_expiry_details_with_expiry_date(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="176274400">0.176</td>
+              <td class="duration" data-value="176274400">0.176</td>
+              <td class="duration" data-value="176274400">0.176</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.i_request_expiry_details_with_upcid(java.lang.Long)</td>
+              <td>1</td>
+              <td class="duration" data-value="165443200">0.165</td>
+              <td class="duration" data-value="165443200">0.165</td>
+              <td class="duration" data-value="165443200">0.165</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.i_request_to_delete_the_expiry_with_upcid(java.lang.Long)</td>
+              <td>1</td>
+              <td class="duration" data-value="169248400">0.169</td>
+              <td class="duration" data-value="169248400">0.169</td>
+              <td class="duration" data-value="169248400">0.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.i_send_a_post_request_for_expiry()</td>
+              <td>1</td>
+              <td class="duration" data-value="259796000">0.259</td>
+              <td class="duration" data-value="259796000">0.259</td>
+              <td class="duration" data-value="259796000">0.259</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.i_send_a_put_request_for_expiry()</td>
+              <td>1</td>
+              <td class="duration" data-value="251880500">0.251</td>
+              <td class="duration" data-value="251880500">0.251</td>
+              <td class="duration" data-value="251880500">0.251</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.i_set_put_discount_service_api_endpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="1006800">0.001</td>
+              <td class="duration" data-value="1006800">0.001</td>
+              <td class="duration" data-value="1006800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.i_update_the_expiry_details_for_the_upcid(java.lang.Long)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.setPostEndpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="1007200">0.001</td>
+              <td class="duration" data-value="1007200">0.001</td>
+              <td class="duration" data-value="1007200">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_brand_of_record_for_expiry_GET_should_be(int,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="4002900">0.004</td>
+              <td class="duration" data-value="4002900">0.004</td>
+              <td class="duration" data-value="8005800">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_brand_of_record_for_expiry_should_be(int,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3000400">0.003</td>
+              <td class="duration" data-value="3000400">0.003</td>
+              <td class="duration" data-value="3000400">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_category_of_record_for_expiry_GET_should_be(int,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2976650">0.002</td>
+              <td class="duration" data-value="2976650">0.002</td>
+              <td class="duration" data-value="5953300">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_category_of_record_for_expiry_should_be(int,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3993400">0.003</td>
+              <td class="duration" data-value="3993400">0.003</td>
+              <td class="duration" data-value="3993400">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_date_of_expiry_of_record_for_expiry_GET_should_be(java.lang.Integer,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="4499000">0.004</td>
+              <td class="duration" data-value="4499000">0.005</td>
+              <td class="duration" data-value="8998000">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_date_of_expiry_of_record_for_expiry_should_be(java.lang.Integer,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1998200">0.001</td>
+              <td class="duration" data-value="1998200">0.001</td>
+              <td class="duration" data-value="1998200">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_expiry_application_is_running()</td>
+              <td>6</td>
+              <td class="duration" data-value="331066">0.000</td>
+              <td class="duration" data-value="331066">0.001</td>
+              <td class="duration" data-value="1986400">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_name_of_record_for_expiry_GET_should_be(int,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2000650">0.002</td>
+              <td class="duration" data-value="2000650">0.002</td>
+              <td class="duration" data-value="4001300">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_name_of_record_for_expiry_should_be(int,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1999800">0.001</td>
+              <td class="duration" data-value="1999800">0.001</td>
+              <td class="duration" data-value="1999800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_response_message_for_expiry_deletion_should_be(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_response_status_code_for_expiry_should_be(java.lang.Integer)</td>
+              <td>6</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_upcid_of_record_for_expiry_GET_should_be(int,java.lang.Long)</td>
+              <td>2</td>
+              <td class="duration" data-value="6680500">0.006</td>
+              <td class="duration" data-value="6680500">0.009</td>
+              <td class="duration" data-value="13361000">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ExpiryDefinitions.ExpirySteps.the_upcid_of_record_for_expiry_should_be(int,java.lang.Long)</td>
+              <td>1</td>
+              <td class="duration" data-value="9520400">0.009</td>
+              <td class="duration" data-value="9520400">0.009</td>
+              <td class="duration" data-value="9520400">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.add_the_aisle_number_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.add_the_brand_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.add_the_category_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.add_the_date_of_expiry_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.add_the_date_of_procurement_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1000700">0.001</td>
+              <td class="duration" data-value="1000700">0.001</td>
+              <td class="duration" data-value="1000700">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.add_the_name_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.add_the_price_as(java.lang.Float)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.add_the_quantity_as(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.i_request_all_products_from_inventory()</td>
+              <td>1</td>
+              <td class="duration" data-value="176389400">0.176</td>
+              <td class="duration" data-value="176389400">0.176</td>
+              <td class="duration" data-value="176389400">0.176</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.i_request_product_details_with_brand(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="163709200">0.163</td>
+              <td class="duration" data-value="163709200">0.163</td>
+              <td class="duration" data-value="163709200">0.163</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.i_request_product_details_with_category(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="165664800">0.165</td>
+              <td class="duration" data-value="165664800">0.165</td>
+              <td class="duration" data-value="165664800">0.165</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.i_request_product_details_with_expiry_date(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="172547100">0.172</td>
+              <td class="duration" data-value="172547100">0.172</td>
+              <td class="duration" data-value="172547100">0.172</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.i_request_product_details_with_procurement_date(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="166119600">0.166</td>
+              <td class="duration" data-value="166119600">0.166</td>
+              <td class="duration" data-value="166119600">0.166</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.i_request_to_delete_the_product_with_upcid_and_aisleNumber(java.lang.Long,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="172776000">0.172</td>
+              <td class="duration" data-value="172776000">0.172</td>
+              <td class="duration" data-value="172776000">0.172</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.i_send_a_post_request_for_product()</td>
+              <td>1</td>
+              <td class="duration" data-value="280646400">0.280</td>
+              <td class="duration" data-value="280646400">0.280</td>
+              <td class="duration" data-value="280646400">0.280</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.setPostEndpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.set_the_difference_as(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_brand_of_record_should_be(int,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="17257175">0.017</td>
+              <td class="duration" data-value="17257175">0.025</td>
+              <td class="duration" data-value="69028700">0.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_category_of_record_should_be(int,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="21830025">0.021</td>
+              <td class="duration" data-value="21830025">0.037</td>
+              <td class="duration" data-value="87320100">0.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_date_of_expiry_of_record_should_be(java.lang.Integer,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="13499175">0.013</td>
+              <td class="duration" data-value="13499175">0.019</td>
+              <td class="duration" data-value="53996700">0.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_date_of_procurement_of_record_should_be(java.lang.Integer,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="15003500">0.015</td>
+              <td class="duration" data-value="15003500">0.020</td>
+              <td class="duration" data-value="60014000">0.060</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_name_of_record_should_be(int,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="14053825">0.014</td>
+              <td class="duration" data-value="14053825">0.016</td>
+              <td class="duration" data-value="56215300">0.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_price_of_record_should_be(int,java.lang.Float)</td>
+              <td>4</td>
+              <td class="duration" data-value="17175600">0.017</td>
+              <td class="duration" data-value="17175600">0.029</td>
+              <td class="duration" data-value="68702400">0.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_product_application_is_running()</td>
+              <td>7</td>
+              <td class="duration" data-value="428414">0.000</td>
+              <td class="duration" data-value="428414">0.002</td>
+              <td class="duration" data-value="2998900">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_quantity_of_record_should_be(int,int)</td>
+              <td>4</td>
+              <td class="duration" data-value="17001175">0.017</td>
+              <td class="duration" data-value="17001175">0.034</td>
+              <td class="duration" data-value="68004700">0.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_response_message_for_product_deletion_should_be(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ProductDefinitions.ProductSteps.the_response_status_code_for_product_should_be(java.lang.Integer)</td>
+              <td>7</td>
+              <td class="duration" data-value="285228">0.000</td>
+              <td class="duration" data-value="285228">0.000</td>
+              <td class="duration" data-value="1996600">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.add_the_brand_name_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.add_the_supplier_contact_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.add_the_supplier_email_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.i_request_all_suppliers()</td>
+              <td>1</td>
+              <td class="duration" data-value="160002700">0.160</td>
+              <td class="duration" data-value="160002700">0.160</td>
+              <td class="duration" data-value="160002700">0.160</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.i_request_supplier_details_with_brand_name(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="161357300">0.161</td>
+              <td class="duration" data-value="161357300">0.161</td>
+              <td class="duration" data-value="161357300">0.161</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.i_request_to_delete_the_supplier_with_brand_name(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="168114900">0.168</td>
+              <td class="duration" data-value="168114900">0.168</td>
+              <td class="duration" data-value="168114900">0.168</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.i_send_a_post_request()</td>
+              <td>1</td>
+              <td class="duration" data-value="194004200">0.194</td>
+              <td class="duration" data-value="194004200">0.194</td>
+              <td class="duration" data-value="194004200">0.194</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.i_send_a_put_request()</td>
+              <td>1</td>
+              <td class="duration" data-value="320617600">0.320</td>
+              <td class="duration" data-value="320617600">0.320</td>
+              <td class="duration" data-value="320617600">0.320</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.i_set_put_supplier_service_api_endpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.i_update_the_supplier_details_for_the_brand_name(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.setPostEndpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.the_application_is_running()</td>
+              <td>5</td>
+              <td class="duration" data-value="670640">0.000</td>
+              <td class="duration" data-value="670640">0.003</td>
+              <td class="duration" data-value="3353200">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.the_brand_name_of_record_should_be(int,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="12999100">0.012</td>
+              <td class="duration" data-value="12999100">0.018</td>
+              <td class="duration" data-value="25998200">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.the_response_message_should_be(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1001400">0.001</td>
+              <td class="duration" data-value="1001400">0.001</td>
+              <td class="duration" data-value="1001400">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.the_response_status_code_should_be(java.lang.Integer)</td>
+              <td>5</td>
+              <td class="duration" data-value="201860">0.000</td>
+              <td class="duration" data-value="201860">0.001</td>
+              <td class="duration" data-value="1009300">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.the_supplier_contact_of_record_should_be(int,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="7999700">0.007</td>
+              <td class="duration" data-value="7999700">0.009</td>
+              <td class="duration" data-value="15999400">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SupplierDefinitions.SupplierSteps.the_supplier_email_of_record_should_be(int,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="9501100">0.009</td>
+              <td class="duration" data-value="9501100">0.014</td>
+              <td class="duration" data-value="19002200">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>96</td>
+            <td>169</td>
+            <td class="duration">0.041</td>
+            <td class="duration">1.748</td>
+            <td class="duration">7.013</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

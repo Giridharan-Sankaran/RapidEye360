@@ -1,0 +1,8 @@
+ExpiryDefinitions\ExpirySteps.class
+DiscountDefinitions\DiscountSteps.class
+SupplierDefinitions\SupplierSteps.class
+testRunner\TestRunner.class
+com\example\RapidEYE360\RapidEye360IntegrationTests.class
+com\example\RapidEYE360\RapidEye360UnitTests.class
+SeleniumTesting\SeleniumScripts.class
+ProductDefinitions\ProductSteps.class

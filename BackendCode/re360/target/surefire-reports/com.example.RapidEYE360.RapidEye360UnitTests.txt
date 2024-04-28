@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.RapidEYE360.RapidEye360UnitTests
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.253 s -- in com.example.RapidEYE360.RapidEye360UnitTests

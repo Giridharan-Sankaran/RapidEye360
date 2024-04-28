@@ -1,0 +1,5 @@
+In the ever-evolving landscape of retail, effective management of product information stands as a linchpin for operational excellence, regulatory adherence, and the facilitation of seamless customer interactions. Our current repo is dedicated to crafting a robust backend API Server system, fortified with state-of-the-art Login Security, leveraging the power of SpringBoot and Java
+
+Our paramount goal is to engineer a backend infrastructure capable of extracting precise, abstracted data, facilitating seamless updates to existing records, and providing comprehensive functionalities accessible to end users through front-end UI interactions.
+
+Through the utilization of SpringBoot, we aim to streamline backend interactions, allowing us to prioritize the design of APIs capable of executing intricate operations and furnishing pertinent statistics and features. Furthermore, we're instituting separate authentication mechanisms for Clerks and Managers, affording the latter additional permissions for overseeing Warehouse Stock, thereby ensuring a secure and tailored experience for each user role..
